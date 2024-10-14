@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="EMO">
+    <meta property="og:title" content="EMO"/>
+    <meta property="og:description"
+          content="DAWN: Dynamic Frame Avatar with Non-autoregressive Diffusion Framework for talking head Video Generation"/>
+    <meta property="og:url" content="URL OF THE WEBSITE"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/video_t1.png"/>
+    <meta property="og:image:width" content="2412"/>
+    <meta property="og:image:height" content="1394"/>
+
+
+    <meta name="twitter:title" content="EMO">
+    <meta name="twitter:description"
+          content="DAWN: Dynamic Frame Avatar with Non-autoregressive Diffusion Framework for talking head Video Generation">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/video_t1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="Image-to-Video">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>EMO</title>
+    <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href=https://github.com/HumanAIGC>
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+            </a>
+        
+        </div>
+
+    </div> -->
+</nav>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">DAWN: Dynamic Frame Avatar with Non-autoregressive Diffusion Framework for talking head Video Generation</h1>
+                    <div class="is-size-5 publication-authors">
+                        <!-- Paper authors -->
+                        <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=hZhytmUAAAAJ&hl=zh-CN" target="_blank">Hanbo Cheng</a>,</span>
+                        <span class="author-block">
+                  <a href="https://openreview.net/profile?id=~Limin_Lin1" target="_blank">Limin Lin</a>,</span>
+                        <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=ODzkDFoAAAAJ&hl=zh-CN" target="_blank">Chenyu Liu</a>,</span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=9PSYaXMAAAAJ&hl=zh-CN" target="_blank">Pengcheng Xia</a>,</span>
+                          <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=9PSYaXMAAAAJ&hl=zh-CN" target="_blank">Pengfei Hu</a>,</span>
+                          <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=rxbJsGoAAAAJ&hl=zh-CN" target="_blank">Jiefeng Ma</a>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=iHb6ScQAAAAJ&hl=zh-CN" target="_blank">Jun Du</a>,</span>
+                                <span class="author-block">
+                                    <a href="https://openreview.net/profile?id=~Jia_Pan2" target="_blank">Jia Pan</a>
+                  </span>
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">University of Science and Technology of China, IFLYTEK Research</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                <!-- <span class="link-block">
+                  <a href="" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span> -->
+                            <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.17485" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="section">
+    
+    <div class="container is-max-desktop">
+        <div class="columns is-vcentered is-centered has-text-centered">
+
+            <div class="column is-centered has-text-centered">
+                <video class="video-player" poster="" id="tree2" controls>
+                    <source src="content/Driven_by_music.mp4" type="video/mp4">
+                </video>
+                <p class="caption is-centered has-text-centered">
+                    Character: Generated by Stable Diffusion<br>
+                    Vocal Source: Taylor Swift - You Belong with Me
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <!-- <img src="content/images/framework/intro.png" alt="MY ALT TEXT" style="width: 80%; height: 80%;"/> -->
+                </div>
+                <div class="content has-text-justified">
+                    <p style="font-size: 1.2em;">
+                        We present DAWN (<b>D</b>ynamic frame <b>A</b>vatar <b>W</b>ith <b>N</b>on-autoregressive diffusion), a framework that enables all-at-once generation of dynamic-length video sequences. Specifically, it consists of two main components: 
+            (1) audio-driven holistic facial dynamics generation in the latent motion space, and 
+            (2) audio-driven head pose and blink generation. Extensive experiments demonstrate that our method generates authentic and vivid videos with precise lip motions, and natural pose/blink movements. Additionally, with a high generation speed, DAWN possesses strong extrapolation capabilities, ensuring the stable production of high-quality long videos. These results highlight the considerable promise and potential impact of DAWN in the field of talking head video generation. Furthermore, we hope that DAWN sparks further exploration of non-autoregressive approaches in diffusion models. Our code will be publicly available.
+                    </p>
+                </div>
+            </div>
+        </div>
+<!--                                            <video class="video-player" poster="" id="tree1" controls>-->
+<!--                    <source src="content/video/main_page.mp4" type="video/mp4">-->
+<!--                </video>-->
+    </div>
+</section>
+
+<!-- Method -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <h2 class="title is-2">Method</h2>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="content/image/pipeline.png" alt="MY ALT TEXT" style="width: 70%; height: 70%;"/>
+            </div>
+            <div class="item">
+                <h2 class="content has-text-justified">
+                    <p style="font-size: 1.2em;">
+Overview of our proposed method. DAWN is divided into three main parts: (1) the Latent Flow Generator (LFG); (2) the conditional Audio-to-Video Flow Diffusion Model (A2V-FDM); and (3) the Pose and Blink generation Network (PBNet). First, we train the LFG to estimate the motion representation between different video frames in the latent space. 
+Subsequently, the A2V-FDM is trained to generate temporally coherent motion representation from audio. 
+Finally, PBNet is used to generate poses and blinks from audio to control the content in the A2V-FDM. To enhance the model's extrapolation ability while ensuring better convergence, we propose a novel Two-stage Curriculum Learning (TCL) training strategy.
+                    </p>
+                </h2>
+                <div class="item">
+                </div>
+            </div>
+</section>
+<!-- End Method -->
+
+<style>
+    .gifImage:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+    }
+
+    .paused {
+        animation-play-state: paused;
+    }
+
+</style>
+
+
+<head>
+    <title>place gif</title>
+    <style>
+        .gif-container {
+            display: flex;
+        }
+
+        .gif {
+            width: 660px; /* 设置 GIF 的宽度 */
+            height: 400px; /* 设置 GIF 的高度 */
+        }
+    </style>
+</head>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Qualitative Results</h2>
+            <br></br>
+            <h3 class="title is-3">Overall Comparison</h3>
+            <h2 class="content has-text-justified">
+                <p style="font-size: 1.4em;"></p>
+            </h2>
+
+            <!-- Different garments -->
+            <!-- <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Make Portrait Sing</h3>
+            </div> -->
+
+            <style>
+                .video-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .video-item column {
+                    width: 48%; /* 各占一半，留下一些间隔 */
+                    object-fit: cover; /* 保持图片纵横比 */
+                    margin: 0 10px;
+                }
+
+
+                .item-gif-container {
+                    width: 48%; /* 占据父元素的80%宽度 */
+                    margin: auto; /* 水平方向上创建相同的空白 */
+                }
+            </style>
+
+            <style>
+                .video-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    /*margin: 0 10px;*/
+                    width: 100%;
+                }
+
+                .description {
+                    font-size: 1.2em;
+                    text-align: justify;
+                }
+
+                .content-description {
+                    margin-top: 10px; /* Add some space above the description */
+                }
+            </style>
+            <style>
+                .caption {
+                    margin-top: 8px; /* Space between the video and its caption */
+                }
+            </style>
+
+            <div class="content has-text-justified">
+                <p style="font-size: 1.2em;">
+                    We compared the DAWN with several state-of-the-art methods, including 
+                    <a href="https://github.com/OpenTalker/SadTalker/tree/main" target="_blank">Sadtalker</a>, 
+                    <a href="https://github.com/wangsuzhen/Audio2Head" target="_blank">Audio2Head</a>,
+                    <a href="https://github.com/Rudrabha/Wav2Lip" target="_blank">Wav2Lip</a>, 
+                    <a href="https://github.com/MStypulkowski/diffused-heads" target="_blank">Diffused Heads</a>, 
+                    .
+                    Our method evidently achieves the visual quality most similar to the ground truth, 
+                    showcasing the most realistic and vivid visual effects. Compared to our method, SadTalker relies on the 3DMM prior, 
+                    which limits its animation capability to the facial region only, 
+                    resulting in significant artifacts when merging the face with the static torso below the neck. 
+                    Additionally, SadTalker exhibits unnatural head pose movements and gaze direction, 
+                    partially due to limited temporal modeling ability. 
+                    Wav2Lip only drives the mouth region and cannot generate head poses or blinks. 
+                    The Audio2Head fails to preserve the speaker's identity during generation. 
+                    For the HDTF dataset, the Diffused Heads method collapsed due to the error accumulation. 
+                </p>
+            </div>
+
+            <div class="video-item is-centered has-text-centered">
+
+                <div class="column is-centered has-text-centered">
+                    <video class="video-player" poster="" id="tree2" controls>
+                        <source src="content/Comparison_with_several_state-of-the-art_methods methods.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption is-centered has-text-centered">
+                        Comparison with several state-of-the-art methods, both on CREMA and HDTF datasets (128*128).
+                    </p>
+                </div>
+
+                <!-- <div class="column">
+                    <video class="video-player" poster="" id="tree2" controls>
+                        <source src="content/video/16比9视频结果/song_sora.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption">
+                        Character: <a href="https://openai.com/sora" target="_blank">AI Lady from SORA</a><br>
+                        Vocal Source: <a href="https://www.youtube.com/watch?v=oygrmJFKYZY" target="_blank">Dua Lipa -
+                        Don't Start Now</a>
+                    </p>
+                </div> -->
+            </div>
+
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Extrapolation validation </h3>
+            </div>
+
+            <div class="content has-text-justified is-centered has-text-centered">
+                <p style="font-size: 1.2em;">
+                    To evaluate the extrapolation capability of our method, we conducted experiments assessing the impact of inference length 
+                    on model performance using the HDTF dataset. The inference length was varied from 40 to 600 frames in a single generation 
+                    process. We produced videos of stable quality over varying inference lengths, which were significantly longer than the 
+                    training video clips, indicating a strong extrapolation capability.
+                </p>
+            </div>
+
+            <div class="video-item is-centered has-text-centered">
+
+                <div class="column">
+                    <video class="video-player is-centered has-text-centered" poster="" id="tree2" controls>
+                        <source src="content/Extrapolation_evaluation.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption">
+                        Extrapolation validation. The character and audio is selected from HDTF dataset (128*128).
+                    </p>
+                </div>
+
+   
+            </div>
+
+            <!-- Pose/blink controllable generation -->
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Pose/blink Controllable Generation </h3>
+            </div>
+
+            <div class="content has-text-justified is-centered has-text-centered">
+                <p style="font-size: 1.2em;">
+                    Our method also enables the controllable generation of pose and blink actions. 
+                    Users can either use pose and blink information generated by our PBNet or provide 
+                    these sequences directly, such as by extracting them from a given video. 
+                    Our method not only provides high-precision control over the pose/blink movements of the generated avatars, 
+                    but also effectively transfers rich facial dynamics, including expressions, blinks, and lip motions.
+                </p>
+            </div>
+
+            <div class="video-item is-centered has-text-centered">
+
+                <div class="column">
+                    <video class="video-player is-centered has-text-centered" poster="" id="tree2" controls>
+                        <source src="content/Cross-identity_reenactment.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption is-centered has-text-centered">
+                        Cross-identity reenactment, the character and audio is selected from HDTF dataset (128*128).
+                    </p>
+                </div>
+
+   
+            </div>
+            
+            <!-- ablation of PBnet -->
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Ablation study on the PBNet</h3>
+            </div>
+
+            <div class="content has-text-justified is-centered has-text-centered">
+                <p style="font-size: 1.2em;">
+                    We evaluate the effectiveness of the PBNet. The term ``w/o PBNet" indicates that the 
+                    PBNet module was removed from the architecture, requiring the A2V-FDM to simultaneously 
+                    generate pose, blink, and lip motions from the audio by itself. It suggests that using the PBNet to 
+                    generate the pose exclusively will provide the pose with more vividness and diversity. 
+                    However, generating lip, head pose, and blink movement from audio simultaneously will 
+                    cause a relatively static head pose, which severely impacts the vividness and naturalness.
+                </p>
+            </div>
+
+            <div class="video-item is-centered has-text-centered">
+
+                <div class="column is-centered">
+                    <video class="video-player is-centered" poster="" id="tree2" controls>
+                        <source src="content/Ablation_study_on PBNet.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption has-text-centered">
+                        The ablation study on the PBNet, the character and audio is selected from HDTF dataset (128*128).
+                    </p>
+                </div>
+
+   
+            </div>
+
+            <!--不同style-->
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Different Portrait Styles & Languages</h3>
+            </div>
+
+            <div class="content has-text-justified is-centered has-text-centered">
+                <p style="font-size: 1.2em;">
+                    Our method is capable of generating avatars in multiple distinct styles. This is achieved by training exclusively on the HDTF (256*256) dataset.
+                </p>
+            </div>
+
+            <div class="video-item is-centered has-text-centered">
+
+                <div class="column">
+                    <video class="video-player is-centered has-text-centered" poster="" id="tree2" controls>
+                        <source src="content/Different_styles_at_higher_resolution.mp4" type="video/mp4">
+                    </video>
+                    <p class="caption">
+                        Character: Generated by Stable Diffusion<br>
+                        Vocal Source: From HDTF dataset. </a>
+                    </p>
+                </div>
+
+   
+            </div>
+
+            
+            
+
+        <!--        <div style="display: flex; justify-content: center; align-items: center; height: 80px;">-->
+        <!--            <h3 class="title is-4">Chinese Song</h3>-->
+        <!--        </div>-->
+        <!--        <style>-->
+        <!--            .video-group {-->
+        <!--                display: flex;-->
+        <!--                justify-content: center;-->
+        <!--            }-->
+
+        <!--            .video-group video {-->
+        <!--                width: 48%; /* 各占一半，留下一些间隔 */-->
+        <!--                object-fit: cover; /* 保持图片纵横比 */-->
+        <!--            }-->
+        <!--        </style>-->
+        <!--        <div class="video-group">-->
+        <!--            <video poster="" id="tree" controls height="100%">-->
+        <!--                <source src="content/video/赫本16_9.mp4" type="video/mp4">-->
+        <!--            </video>-->
+        <!--        </div>-->
+
+        <br></br>
+    </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content" style="text-align: center;">
+                    <p>
+                        This project is intended solely for academic research and effect demonstration.
+                    </p>
+
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                            target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                                                                       target="_blank">Nerfies</a> project
+                        page.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="static/js/script.js"></script>
+<script>
+    // 获取所有视频元素
+    var videos = document.querySelectorAll('video');
+
+    // 为每个视频添加播放事件监听器
+    videos.forEach(function(video) {
+        video.addEventListener('play', function() {
+            // 当任何一个视频开始播放时，暂停其他所有视频
+            videos.forEach(function(otherVideo) {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        }, false);
+    });
+</script>
+
+<script>
+    new BeforeAfter({
+        id: '#example1'
+    });
+    new BeforeAfter({
+        id: '#example2'
+    });
+    new BeforeAfter({
+        id: '#example3'
+    });
+    new BeforeAfter({
+        id: '#example4'
+    });
+    new BeforeAfter({
+        id: '#example6'
+    });
+    new BeforeAfter({
+        id: '#example7'
+    });
+
+</script>
+
+<script>
+    var gifImage = document.getElementById('gifImage');
+    var isPaused = false;
+
+    gifImage.addEventListener('mouseenter', function () {
+        gifImage.src = gifImage.src;
+        isPaused = true;
+    });
+
+    gifImage.addEventListener('mouseleave', function () {
+        if (isPaused) {
+            gifImage.src = gifImage.src;
+            isPaused = false;
+        }
+    });
+</script>
+
+<script>
+    bulmaCarousel.attach('#results-carousel11', {
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        infinite: true,
+        autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel22', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel44', {
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        infinite: false,
+        autoplay: false,
+    });
+</script>
+
+<script>
+    document.getElementById('gifImage3').src = 'content/gifs/Item.gif';
+    document.getElementById('gifImage1').src = 'content/gifs/s1.gif';
+    document.getElementById('gifImage2').src = 'content/gifs/s2.gif';
+
+    // 图片资源路径
+    const images = [
+        'content/teaser/t3.gif',
+        'content/teaser/t4.gif',
+        'content/teaser/t1.gif',
+        'content/teaser/t2.gif'
+    ];
+
+    // 获取要插入图片的div
+    const group1 = document.getElementById('group1');
+    const group2 = document.getElementById('group2');
+
+    // 创建并插入前两张图片
+    for (let i = 0; i < 2; i++) {
+        const img = document.createElement('img');
+        img.src = images[i];
+        img.loading = 'lazy';
+        img.alt = '图片' + (i + 1);
+        group1.appendChild(img);
+    }
+
+    // 创建并插入后两张图片
+    for (let i = 2; i < images.length; i++) {
+        const img = document.createElement('img');
+        img.src = images[i];
+        img.loading = 'lazy';
+        img.alt = '图片' + (i + 1);
+        group2.appendChild(img);
+    }
+
+</script>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+<!--<script type="text/javascript">-->
+<!--    var sc_project = 12948235;-->
+<!--    var sc_invisible = 1;-->
+<!--    var sc_security = "8cca28b8";-->
+<!--</script>-->
+<!--<script type="text/javascript"-->
+<!--        src="https://www.statcounter.com/counter/counter.js" async></script>-->
+<!--<noscript>-->
+<!--    <div class="statcounter"><a title="Web Analytics"-->
+<!--                                href="https://statcounter.com/" target="_blank"><img class="statcounter"-->
+<!--                                                                                     src="https://c.statcounter.com/12948235/0/8cca28b8/1/"-->
+<!--                                                                                     alt="Web Analytics"-->
+<!--                                                                                     referrerPolicy="no-referrer-when-downgrade"></a>-->
+<!--    </div>-->
+<!--</noscript>-->
+<!-- Default Statcounter code for emo
+https://humanaigc.github.io/emote-portrait-alive/ -->
+<script type="text/javascript">
+var sc_project=12971563;
+var sc_invisible=1;
+var sc_security="969d42aa";
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12971563/0/969d42aa/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+<!-- End of Statcounter Code -->
+</body>
+
+
+</html>
